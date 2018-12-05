@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </head>
+  <body>
+    <div class="form-group">
+      <h1>To-Do <small>List</small></h1>
+    <form role="form" method="post">
+        <input type="text" class="form-control" placeholder="Your Task" name="task">
+    </form>
+    <button type="button" class="btn btn btn-primary">Add</button>
+        </div>
+        <div></div>
+    <ul id="todo">
+        {% for task in tasks %}
+          <li>{{ task.task }}</li>
+        {% endfor %}
+    </ul>
+
+  </body>
+</html>
